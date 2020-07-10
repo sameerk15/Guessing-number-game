@@ -1,0 +1,33 @@
+import random                            #A Basic guessing number game and getting prizes depending on number of trials you took.
+
+play_game='yes'
+
+while play_game=='yes':
+    answer=random.randint(1,100)
+    guess=int(input("Guess your number between 1 to 100:"))
+    count=1
+    
+    while guess!=answer:
+        if guess<answer:
+            print("Your guess is too low.")
+        elif guess>answer:
+            print("Your guess is too high.")
+        guess=int(input("Guess your number between 1 to 100:"))
+        count+=1
+    print("Number of trials which you took is",str(count))
+    break
+
+if count<4:
+    print("Congratulations Sam you win 1000 Rupees! ")
+
+elif count<=6:
+    print("You seem to be running on good luck Sam,you win 500 Rupees!")
+    
+elif count<10:
+    print("Hey,don't worry you are still winning 100 Rupess")
+else:
+    print("Well Sorry!better luck next time!")
+    
+print("Congratulations if good luck got you some reward and if not you can always try again!")  
+
+print("The correct answer to this game was",str(answer),"which took you",str(count),"attempts.")
