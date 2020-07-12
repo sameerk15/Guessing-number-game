@@ -18,7 +18,7 @@ while play_game=='yes':
     break
 
 if count<4:
-    print("Congratulations Sam you win 1000 Rupees! ")
+    print("Congratulations man you win 1000 Rupees! ")
 
 elif count<=6:
     print("You seem to be running on good luck Sam,you win 500 Rupees!")
